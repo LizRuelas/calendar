@@ -33,6 +33,66 @@ let selectALL = document.getElementById('selectALL');
 selectALL.addEventListener('click', ()=>selectAll());
 
 
+
+let lun = document.getElementById('lun');
+let mar = document.getElementById('mar');
+let mie = document.getElementById('mie');
+let jue = document.getElementById('jue');
+let vie = document.getElementById('vie');
+let sab = document.getElementById('sab');
+let dom = document.getElementById('dom');
+const colorOne = "rgb(43, 206, 207)";
+const colorTwo  = "white";
+
+lun.addEventListener('click', function(){
+    var elements = document.getElementsByClassName('calendar__item'); // get all elements
+    for(var i = 0; i < elements.length; i+=7){
+        elements[i].style.backgroundColor = (elements[i].style.backgroundColor == colorOne) ? colorTwo : colorOne;
+    }
+});
+
+mar.addEventListener('click', function(){
+    var elements = document.getElementsByClassName('calendar__item'); // get all elements
+    for(var i = 1; i < elements.length; i+=7){
+        elements[i].style.backgroundColor = (elements[i].style.backgroundColor == colorOne) ? colorTwo : colorOne;
+    }
+});
+
+mie.addEventListener('click', function(){
+    var elements = document.getElementsByClassName('calendar__item'); // get all elements
+    for(var i = 2; i < elements.length; i+=7){
+        elements[i].style.backgroundColor = (elements[i].style.backgroundColor == colorOne) ? colorTwo : colorOne;
+    }
+});
+
+jue.addEventListener('click', function(){
+    var elements = document.getElementsByClassName('calendar__item'); // get all elements
+    for(var i = 3; i < elements.length; i+=7){
+        elements[i].style.backgroundColor = (elements[i].style.backgroundColor == colorOne) ? colorTwo : colorOne;
+    }
+});
+
+vie.addEventListener('click', function(){
+    var elements = document.getElementsByClassName('calendar__item'); // get all elements
+    for(var i = 4; i < elements.length; i+=7){
+        elements[i].style.backgroundColor = (elements[i].style.backgroundColor == colorOne) ? colorTwo : colorOne;
+    }
+});
+
+sab.addEventListener('click', function(){
+    var elements = document.getElementsByClassName('calendar__item'); // get all elements
+    for(var i = 5; i < elements.length; i+=7){
+        elements[i].style.backgroundColor = (elements[i].style.backgroundColor == colorOne) ? colorTwo : colorOne;
+    }
+});
+
+dom.addEventListener('click', function(){
+    var elements = document.getElementsByClassName('calendar__item'); // get all elements
+    for(var i = 6; i < elements.length; i+=7){
+        elements[i].style.backgroundColor = (elements[i].style.backgroundColor == colorOne) ? colorTwo : colorOne;
+    }
+});
+
 // prevMonthDOM.addEventListener('click', ()=>lastMonth());
 // nextMonthDOM.addEventListener('click', ()=>nextMonth());
 
@@ -178,9 +238,6 @@ function myFunction(id, elem) {
 	elem.target.style.backgroundColor = (elem.target.style.backgroundColor == colorOne) ? colorTwo : colorOne;
     
 }
-
-
-
 
 
 writeMonth(monthNumber);
